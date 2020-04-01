@@ -1,8 +1,4 @@
-all: dsa191a1
-
-DEFS = -DUSE_SOME_DEF
-
-dsa172a1: dbLib.o main.o processData.o
+all: dbLib.o main.o processData.o
 	g++ main.o dbLib.o processData.o -std=c++11 -o dsa191a1 $(DEFS)
 main.o: main.cpp dsaLib.h dbLib.h processData.h
 	g++ -c main.cpp -std=c++11 $(DEFS)
